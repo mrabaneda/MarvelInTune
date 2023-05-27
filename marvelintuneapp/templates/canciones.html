@@ -1,1 +1,21 @@
-¡Hola mundo!
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<div class="container container-canciones">
+    <div class="row">
+        <div class="col-lg-12">
+            <form class="miformulario" action="" id="miFormulario">
+                <input class="inputclass" type="text" value="" placeholder="Introduzca un titulo">
+                <input class="boton-submit" type="submit" value="Confirmar">
+            </form>
+        </div>
+        <div class="col-lg-12">
+            <div id="resultado"></div>
+        </div>
+    </div>
+    <audio controls>
+    <source src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/39/c7/65/39c7658f-d236-46a3-a424-bede425dd82f/mzaf_10359347519302824199.plus.aac.p.m4a" type="audio/mpeg">
+    Tu navegador no admite la reproducción de audio.
+    </audio>
+</div>
+{% endblock %}

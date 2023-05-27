@@ -223,6 +223,15 @@ form label{
     font-style: italic;
     font-weight: 500;
 }
+.boton-more-info span{
+    background: #FFFFFF;
+    border-radius: 50px;
+    color: #32383e;
+    padding: 20px 48px;
+    font-style: italic;
+    font-weight: 500;
+    cursor: pointer;
+}
 .imagen-black-spidey{
     display: flex;
     justify-content: flex-end;
@@ -233,4 +242,34 @@ form label{
     width: 100%;
     max-width: 500px;
     max-height: 580px;
+}
+
+/* Estilos página canciones */
+.container-canciones{
+    padding-top: 100px;
+}
+.inputclass{
+    width: 100%;
+    padding: 20px;
+    font-size: 22px;
+    border-radius: 8px;
+}
+.miformulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.boton-submit{
+    background: #FFFFFF;
+    border-radius: 50px;
+    color: #32383e;
+    padding: 20px 48px;
+    font-style: italic;
+    font-weight: 500;
+    cursor: pointer;
+}
+#resultado{
+    color: white;
 }
