@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+    <div class="container-fluid ">
+        <!-- Contenido de la página que cambia -->
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="imagenes">
+                        <img class="studios" src="{% static 'images/studios.png' %}" alt="">
+                        <img class="logo-spiderman" src="{% static 'images/spiderman-logo.png' %}" alt="">
+                        <img class="noway" src="{% static 'images/no-way-home.png' %}" alt="">
+                    </div>
+                    <div class="texto-hero">
+                        <p>Descubre las mejores canciones con temática de Marvel y sumérgete en la experiencia musical que acompaña a nuestros icónicos superhéroes.</p>
+                    </div>
+                    <div class="boton-more-info">
+                        <a href="{% url 'canciones' %}">Pruébame</a>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="imagen-black-spidey">
+                        <img class="black-spidey" src="{% static 'images/black-spidey.png' %}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
