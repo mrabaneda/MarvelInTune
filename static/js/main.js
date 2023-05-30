@@ -1,14 +1,5 @@
 // Espera a que el documento HTML se cargue completamente
 document.addEventListener('DOMContentLoaded', function() {
-
-    // Funcionalidad del menu en mobile
-    var mobile = document.querySelector('.navbar-toggler')
-    var nav_mobile = document.querySelector('.nav-mobile')
-    function handleClick() {
-        nav_mobile.classList.toggle('active');
-    }
-    mobile.addEventListener('click', handleClick)
-
     // Obtén el elemento del formulario por su ID
     var formulario = document.getElementById('miFormulario');
     var titulos = document.querySelector('.header-tabla');

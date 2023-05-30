@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Marvel in Tune{% endblock %}</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <!-- Add additional CSS in static file -->
+    <!-- Load static para que cargue la carpeta static -->
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" >
     <script src="{% static 'js/main.js' %}"></script>
@@ -23,7 +23,7 @@
                     <a href="{% url 'index' %}"">Home</a>
                     <a href="{% url 'canciones' %}"">Canciones</a>
                     <a href="">Comics</a>
-                    <a href="">Biblioteca</a>
+                    <a href="{% url 'blog' %}">Blog</a>
                 </div>
                 <div class="usuario">
                     <a href="{% url 'index' %}"><img src="{% static 'images/usuario.png' %}" alt=""></a>
@@ -35,6 +35,19 @@
             <span class="navbar-toggler-icon"></span>
         </button>
     </nav>
+    <div class="nav-mobile">
+        <div class="bloque-nav-mobile">
+            <div class="navegacion-mobile">
+                <a href="{% url 'index' %}"">Home</a>
+                <a href="{% url 'canciones' %}"">Canciones</a>
+                <a href="">Comics</a>
+                <a href="{% url 'blog' %}">Blog</a>
+            </div>
+            <div class="usuario">
+                <a href="{% url 'index' %}"><img src="{% static 'images/usuario.png' %}" alt=""></a>
+            </div>
+        </div>
+    </div>
     {% block content %}
     {% endblock %}
 

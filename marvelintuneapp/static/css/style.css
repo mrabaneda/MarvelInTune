@@ -142,6 +142,11 @@ form label{
     justify-content: space-between;
     align-items: center;
 }
+@media (max-width: 992px){
+    .separacion {
+        width: initial;
+    }   
+}
 .bloque-nav{
     display: flex;
     align-items: center;
@@ -160,12 +165,20 @@ form label{
     color: #dc4d30!important;
     border-radius: 10px;
 }
-
+.container-home{
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
 
 /* Estilos nav */
 .navbar{
-    padding: 20px 100px 0 100px;
-    background-color: #121742!important;
+    padding: 20px 100px 20px 100px;
+    background-color: #161c52!important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    margin-bottom: 150px;
+    z-index: 9999;
 }
  .logo {
     max-width: 170px;
@@ -174,6 +187,7 @@ form label{
     display: flex;
     gap: 50px;
  }
+ 
  .navegacion a {
     font-size: 22px;
     color: white;
@@ -182,10 +196,51 @@ form label{
  .navegacion a:hover{
     color: #F91818;
  }
+
  .usuario img{
     max-width: 50px;
  }
+ .nav-mobile{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -100vh;
+    transition: all .5s ease;
+ }
+ .nav-mobile.active{
+    top: 0;
+    z-index: 999;
+    background: #161c52!important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+ }
+ .navegacion-mobile{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+ }
+ .navegacion-mobile a{
+    font-size: 22px;
+    color: white;
+    transition: all .3s ease;
+ }
+ .navegacion-mobile a:hover{
+    color: #F91818;
+ }
+ @media (max-width: 992px){
+    .navbar{
+        padding: 20px 20px 20px 20px;
+    }
+    .navegacion {
+        display: none;
+    }
+    .usuario{
+        display: none;
+    }
+ }
  /* Estilos hero */
  .imagenes{
     padding: 100px 0 50px 0;
@@ -246,7 +301,7 @@ form label{
 
 /* Estilos página canciones */
 .container-canciones{
-    padding-top: 100px;
+    padding-top: 150px;
 }
 .inputclass{
     width: 100%;
@@ -272,4 +327,29 @@ form label{
 }
 #resultado{
     color: white;
+    margin-bottom: 100px;
+}
+/* Estilos tabla */
+.col{
+    color: white;
+}
+.header-tabla-hide{
+    display: none;
+}
+.header-tabla .col{
+    border: 1px solid white;
+    background: #d43c3c;
+}
+
+#instance .col{
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.col img{
+    margin: 20px 0;
+}
+.col audio{
+    max-width: 251px;
 }

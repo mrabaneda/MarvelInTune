@@ -8,3 +8,6 @@ def index(request):
 
 def canciones(request):
     return render(request,'canciones.html')
+
+def blog(request):
+    return render(request,'blog.html')

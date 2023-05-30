@@ -8,7 +8,7 @@
 }
 html, body {
     height: 100%;
-    background-color: #152733;
+    background-color: #121742;
 }
 form {
     margin: 20px;
@@ -142,6 +142,11 @@ form label{
     justify-content: space-between;
     align-items: center;
 }
+.bloque-nav{
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
 .colecciones-button{
     padding: 10px 20px;
     background: #dc4d30;
@@ -154,4 +159,150 @@ form label{
     background: white;
     color: #dc4d30!important;
     border-radius: 10px;
+}
+.container-home{
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+/* Estilos nav */
+.navbar{
+    padding: 20px 100px 20px 100px;
+    background-color: #161c52!important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    margin-bottom: 150px;
+    z-index: 9999;
+}
+ .logo {
+    max-width: 170px;
+ }
+ .navegacion{
+    display: flex;
+    gap: 50px;
+ }
+ .navegacion a {
+    font-size: 22px;
+    color: white;
+    transition: all .3s ease;
+ }
+ .navegacion a:hover{
+    color: #F91818;
+ }
+ .usuario img{
+    max-width: 50px;
+ }
+
+ /* Estilos hero */
+ .imagenes{
+    padding: 100px 0 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+ }
+.imagenes .studios{
+    max-width: 280px;
+    margin-right: 40px;
+}
+.imagenes .logo-spiderman{
+    max-width: 450px;
+}
+.imagenes .noway{
+    max-width: 429px;
+}
+.texto-hero{
+    text-align: center;
+    font-size: 18px;
+    color: #FFFFFF;
+}
+.boton-more-info{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.boton-more-info a {
+    background: #FFFFFF;
+    border-radius: 50px;
+    color: #32383e;
+    padding: 20px 48px;
+    font-style: italic;
+    font-weight: 500;
+}
+.boton-more-info span{
+    background: #FFFFFF;
+    border-radius: 50px;
+    color: #32383e;
+    padding: 20px 48px;
+    font-style: italic;
+    font-weight: 500;
+    cursor: pointer;
+}
+.imagen-black-spidey{
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+    align-items: center;
+}
+.black-spidey{
+    width: 100%;
+    max-width: 500px;
+    max-height: 580px;
+}
+
+/* Estilos página canciones */
+.container-canciones{
+    padding-top: 150px;
+}
+.inputclass{
+    width: 100%;
+    padding: 20px;
+    font-size: 22px;
+    border-radius: 8px;
+}
+.miformulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.boton-submit{
+    background: #FFFFFF;
+    border-radius: 50px;
+    color: #32383e;
+    padding: 20px 48px;
+    font-style: italic;
+    font-weight: 500;
+    cursor: pointer;
+}
+#resultado{
+    color: white;
+    margin-bottom: 100px;
+}
+/* Estilos tabla */
+.col{
+    color: white;
+}
+.header-tabla-hide{
+    display: none;
+}
+.header-tabla .col{
+    border: 1px solid white;
+    background: #d43c3c;
+}
+
+#instance .col{
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.col img{
+    margin: 20px 0;
+}
+.col audio{
+    max-width: 251px;
 }
