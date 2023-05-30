@@ -1,7 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 from django.template.response import TemplateResponse
-from django.template.context import Context
 # Imports para usar BeautifulSoup
 import requests
 from bs4 import BeautifulSoup

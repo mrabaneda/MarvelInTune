@@ -353,3 +353,37 @@ form label{
 .col audio{
     max-width: 251px;
 }
+
+/* Estilos del blog */
+
+.container-blog{
+    padding-top: 150px;
+    padding-bottom: 100px;
+}
+.container-blog h1{
+    color: white;
+    text-align: center;
+}
+
+.post-category{
+    display: none;
+}
+.post-date{
+    color: white;
+}
+.post-thumbnail img{
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+.post-title a{
+    color: white;
+}
+.entry p{
+    color: white;
+}
+.post-inner{
+    /* Shorthand de margin-top/margin-right/margin-bottom/margin-left */
+    margin: 50px 150px 100px 100px;
+}
