@@ -61,14 +61,53 @@ document.addEventListener('DOMContentLoaded', function() {
           // bucle para recorrer los hits y quedarnos con sus tracks
           for (var i = 0; i < hits.length; i++) {
             var hit = hits[i].track;
+          // por cada iteración pintamos esté código html (el cual mezclamos con datos de la API)
             contenido += '<div class="row" id="instance"><div class="col">"'+ hit.title +'"</div><div class="col">' + hit.subtitle + '</div><div class="col"><img src="'+ hit.share.image +'" width="120" height="120"></img></div><div class="col"><audio controls><source src="'+ hit.hub.actions[1].uri +'" type="audio/mpeg">Tu navegador no admite la reproducción de audio.</audio></div></div>'
           }
       
           // Actuamos sobre el contenido en el elemento con el ID "resultado"
           // Con innerHTML añadimos al elemento con el id = resultado todo el contenido extraído del bucle anterior en forma de html
           document.getElementById("resultado").innerHTML = contenido;
+
+
+          var myHeadersPelis = new Headers();
+          myHeadersPelis.append("X-RapidAPI-Key", "923c198955mshefd7d010a39f7e5p159f04jsnb927724d90d3");
+  
+          var requestOptions = {
+            method: 'GET',
+            headers: myHeadersPelis,
+            redirect: 'follow'
+          };
+
+          // -------------------- SEGUNDA PETICION API ----------------------------------
+
+          // La segunda petición API, la realizamos dentro de la otra, para que cuando se ejecute la primera ocurra la segunda. Esto lo hacemos porque la segunda cargaba mas rápida y nos venía mejor que apareciara primero la de las canciones
+          fetch("https://online-movie-database.p.rapidapi.com/auto-complete?q=" + nombre + "", requestOptions)
+            .then(response => response.json())
+            .then(data => {
+              var contenidoPelis = ""
+              // Recorremos las películas
+              data.d.forEach(movie => {
+                // Este if nos sirve para detectar que item del bucle nos devuelve una url para la imagen vacía y le establecemos una por defecto.
+                if (movie.i && movie.i.imageUrl) {
+                  var urlImageMovie = movie.i.imageUrl
+                }else{
+                  var urlImageMovie = "https://media.wired.com/photos/5955ceabcbd9b77a41915cf6/master/w_2560%2Cc_limit/marvel-characters.jpg"
+                }
+                // por cada iteración pintamos esté código html (el cual mezclamos con datos de la API)
+
+                contenidoPelis += '<div class="pelicula"><div class="imagen-datos"><div class="imagen"><img src="' + urlImageMovie + '" alt=""></div><div class="datos"><h3>' + movie.l + '</h3><span class="valoracion">Ranking: ' + movie.rank + '</span><div class="resto-datos"><span>Actores: ' + movie.s  + ' </span><span>Año de salida: ' + movie.y + '</span></div></div></div></div>'
+              });
+              // Actuamos sobre el contenido en el elemento con el ID "resultadoPelis"
+              // Con innerHTML añadimos al elemento con el id = resultadoPelis todo el contenido extraído del bucle anterior en forma de html
+              document.getElementById("resultadoPelis").innerHTML = contenidoPelis;
+            })
+            .catch(error => console.log('error', error));
+  
+
         })
         .catch(error => console.log('error', error));
+        
     });
   });
 

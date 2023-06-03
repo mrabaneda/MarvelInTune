@@ -1,14 +1,6 @@
 # docker-compose.yml
 version: '3.7'
 services:
-  # db:
-  #   image: mysql:8
-  #   environment:
-  #     # - MYSQL_DATABASE='marvelintune'
-  #     # - MYSQL_USER='userisi'
-  #     # - MYSQL_PASSWORD='userisi123'
-  #     # - MYSQL_ROOT_PASSWORD='oDR+Q@HM'[Y>X2C5'
-  #     # - MYSQL_HOST=''
   web:
     build: .
     volumes:
@@ -16,6 +8,3 @@ services:
     ports:
       - 8000:8000
     command: python manage.py runserver 0.0.0.0:8000
-
-
-

@@ -10,131 +10,8 @@ html, body {
     height: 100%;
     background-color: #121742;
 }
-form {
-    margin: 20px;
-}
-.form-body {
-    border: 2px solid white;
-    border-radius: 16px;
-    width: 70%;
-    margin: 100px auto;
-}
-@media (max-width:800px) {
-    .form-body{
-        width: 80%;
-    }
-
-}
-.form-body p, .form-body h2 {
-    color: white;
-
-}
-.form-body h2 {
-    margin-top: 30px;
-}
-
-
-.contenido h2, .contenido p {
-    text-align: center;
-}
-
-
-.enlaces {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.enlaces a{
-    padding: 9px 20px;
-    text-align: left;
-    border: 0;
-    outline: 0;
-    border-radius: 6px;
-    background-color: #fff;
-    font-size: 15px;
-    font-weight: 300;
-    color: #8D8D8D;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    margin-top: 16px;
-    margin-bottom: 30px;
-}
-
-.enlaces a:hover{
-    background-color: #4ac46e;
-    color: white;
-    font-weight: 500;
-}
-th,td {
-    text-align: center;
-}
-td {
-    border: 1px solid white;
-}
-th {
-    border: 2px solid white;
-}
-.table {
-    width: 80%;
-    margin: top;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.formulario-login {
-    width: 32%;
-    margin: 0 auto;
-    min-height: 688px;
-}
-.formulario-login label {
-    color: white;
-    font-family: Poppins;
-}
-
-label {
-    display: block;
-    font: 1rem 'Fira Sans', sans-serif;
-}
-
-input,
-label {
-    margin: .4rem 0;
-}
-.title {
-    width: 80%;
-    margin: 0 auto;
-    color: white;
-    background: #32383e;
-}
-
-.title p {
-    text-align: center;
-    font-size: 18px;
-    margin-bottom: 0;
-    padding: 20px 0;
-}
-.mb-3 select {
-    display: block;
-    width: 100%;
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #495057;
-    background-color: #fff;
-    background-clip: padding-box;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-    height: 39px;
-}
-h3,th {
-    color: white;
-}
-.form-body-galeria{
-    margin: 10px auto 50px auto!important;
-}
-.color-white {
-    color: white;
-}
-form label{
-    color: white;
+.header-tabla{
+    margin-top: 50px!important;
 }
 .separacion {
     width: 100%;
@@ -400,6 +277,7 @@ form label{
     border-radius: 8px;
     color: white;
     padding: 0 50px 0 0;
+    margin-bottom: 50px;
 
 }
 
@@ -429,6 +307,7 @@ form label{
 .peliculas .pelicula .imagen-datos img{
     width: 100%;
     max-width: 500px;
+    max-height: 500px;
 }
 .peliculas .pelicula .descripcion{
     padding: 30px 15px 20px 15px;
