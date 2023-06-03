@@ -28,3 +28,6 @@ def blog(request):
 
     # Renderiza el template con el contenido HTML de los artículos
     return TemplateResponse(request, 'blog.html', {'articles': article_strings})
+
+def peliculas(request):
+    return render(request,'peliculas.html')

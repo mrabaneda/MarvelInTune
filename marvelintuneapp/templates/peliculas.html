@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<div class="container container-canciones">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="peliculas" id="peliculas">
+
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var myHeaders = new Headers();
+myHeaders.append("X-RapidAPI-Key", "923c198955mshefd7d010a39f7e5p159f04jsnb927724d90d3");
+
+var requestOptions = {
+  method: 'GET',
+  headers: myHeaders,
+  redirect: 'follow'
+};
+
+fetch("https://marvel-heroic-api-unlock-the-mcu-legendary-characters.p.rapidapi.com/db.json", requestOptions)
+  .then(response => response.json())
+  .then(data => {
+    const topFive = data.TOPFIVE;
+    var datosApi = "";
+
+    topFive.forEach(item => {
+      const itemData = item.data;
+      
+      itemData.forEach(dataItem => {
+        const title = dataItem.title;
+        const rating = dataItem.rating;
+        const overview = dataItem.overview;
+        const releaseDate = dataItem.releaseDate;
+        const poster = dataItem.mainposter;
+        const generes = dataItem.generes;
+        const languages = dataItem.languages;
+        
+        datosApi += '<div class="pelicula"><div class="imagen-datos"><div class="imagen"><img src="' + poster + '" alt=""></div><div class="datos"><h3>' + title + '</h3><span class="valoracion">Valoracion: ' + rating + '</span><div class="resto-datos"><span>Género: ' + generes + ' </span><span>Fecha de salida: ' + releaseDate + ' </span><span>Idiomas: ' + languages + '</span></div></div></div><div class="descripcion"><p>' + overview + '</p></div></div>'
+      });
+    });
+    document.getElementById("peliculas").innerHTML = datosApi;
+  })
+  .catch(error => console.log('error', error));
+</script>
+{% endblock %}
