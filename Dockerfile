@@ -1,7 +1,6 @@
 # Dockerfile
-FROM python:3.9-alpine
+FROM python:3.9
 WORKDIR /app  
 COPY . /app
-RUN apk add zlib-dev jpeg-dev gcc musl-dev
 RUN pip install -r ./requirements.txt
 # falta añadir el python manage.py collectstatic

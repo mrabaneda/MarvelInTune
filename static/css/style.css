@@ -198,7 +198,7 @@ form label{
  }
 
  .usuario img{
-    max-width: 50px;
+    max-width: 65px;
  }
  .nav-mobile{
     position: absolute;
@@ -386,4 +386,67 @@ form label{
 .post-inner{
     /* Shorthand de margin-top/margin-right/margin-bottom/margin-left */
     margin: 50px 150px 100px 100px;
+}
+
+/* Estilos para peliculas */
+.peliculas{
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    margin-bottom: 100px;
+}
+.peliculas .pelicula{
+    background: rgba(255, 255, 255, 0.158);
+    border-radius: 8px;
+    color: white;
+    padding: 0 50px 0 0;
+
+}
+
+.peliculas .pelicula .imagen-datos{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 50px;
+    color: white;
+}
+.peliculas .pelicula .imagen-datos .datos{
+    flex: 1 0 0;
+}
+.peliculas .pelicula .imagen-datos .valoracion{
+    border-bottom: 1px solid white;
+    font-size: 20px;
+    padding-bottom: 10px;
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+}
+.peliculas .pelicula .imagen-datos .resto-datos{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.peliculas .pelicula .imagen-datos img{
+    width: 100%;
+    max-width: 500px;
+}
+.peliculas .pelicula .descripcion{
+    padding: 30px 15px 20px 15px;
+
+}
+@media (max-width: 992px){
+    .peliculas .pelicula .imagen-datos{
+        flex-wrap: wrap;
+        gap: 0;
+    }
+    .peliculas .pelicula .imagen-datos img{
+        width: 100%;
+        max-width: 100%;
+    }
+    .peliculas .pelicula{
+        padding: 0 0 0 0;
+    }
+    .peliculas .pelicula .imagen-datos .datos{
+        padding: 30px 15px 20px 15px;
+    }
 }

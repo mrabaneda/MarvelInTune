@@ -10,4 +10,12 @@ Miembros
  * :bust_in_silhouette:   Mauricio Luque Jiménez     :octocat:     
  * :bust_in_silhouette:  María Rabaneda Sierra     :octocat:
 
+
+
+
+
+
+Cosas a tener en cuenta:
+* Busqueda con guiones
+* Si la petición api no devuelve foto, hemos puesto una por defecto
 -----

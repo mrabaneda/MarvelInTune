@@ -9,8 +9,8 @@ def index(request):
     return render(request,'home.html')
 
 
-def canciones(request):
-    return render(request,'canciones.html')
+def buscador(request):
+    return render(request,'buscador.html')
 
 def blog(request):
     url = 'https://marvelblog.com/'  # Reemplaza con la URL de la página que deseas raspar
@@ -28,6 +28,3 @@ def blog(request):
 
     # Renderiza el template con el contenido HTML de los artículos
     return TemplateResponse(request, 'blog.html', {'articles': article_strings})
-
-def peliculas(request):
-    return render(request,'peliculas.html')
