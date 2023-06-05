@@ -12,8 +12,9 @@ def index(request):
 def buscador(request):
     return render(request,'buscador.html')
 
+#   ----------------USO WEBSCRAPPING----------------
 def blog(request):
-    url = 'https://marvelblog.com/'  # Reemplaza con la URL de la página que deseas raspar
+    url = 'https://marvelblog.com/'  # Reemplaza con la URL de la página a la que se desea hacer webscrapping
     response = requests.get(url)
     html = response.content
 
