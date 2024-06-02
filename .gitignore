@@ -1,4 +1,33 @@
+# Python
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+.env
 
-__pycache__
-env
-# static
+# Django
+*.log
+db.sqlite3
+
+# Docker
+.dockerignore
+docker-compose.yml
+docker-compose.override.yml
+Dockerfile*
+*/Dockerfile*
+
+# Virtualenvs
+venv/
+env/
+
+# GCloud
+.gcloudignore
+
+# IDEs and Editors
+.idea/
+.vscode/
+*.swp
+
+# System
+.DS_Store
+Thumbs.db
