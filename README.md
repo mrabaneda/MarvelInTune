@@ -12,7 +12,7 @@ En resumen, nuestro objetivo con este proyecto es crear una visión más complet
  * :bust_in_silhouette:  María Rabaneda Sierra     :octocat:
 
 
-*Enlace URL pública:*  [Marvel In Tune App](https://back-api-dot-single-nebula-380811.ey.r.appspot.com/)
+*Enlace URL pública:*  [Marvel In Tune App](https://marvel-in-tune-24.oa.r.appspot.com/)
 
 
 -----
@@ -23,7 +23,6 @@ Ya sea dentro o fuera de un entorno virtual de Python (a elección):
 ```
 $ pip install -r requirements.txt
 $ python manage.py collectstatic
-
 ```
 ### Cómo levantar el contenedor para visualizar el contenido en local
 
@@ -57,7 +56,6 @@ $ docker-compose up
 -----
 
 *Detalles a tener en cuenta:*
-* A la hora de buscar en nuestra aplicación web, no detecta los espacios " ", así que es recomendable realizar las busquedas con *guiones* en su lugar.
 * A la hora de visualizar las películas tras la búsqueda, si se da el caso de que la petición API no devuelve ninguna imagen, hemos puesto la siguiente por defecto:
 
 ![Método UX](marvelintuneapp/static/images/marvel-characters.webp)
