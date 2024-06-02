@@ -1,5 +1,5 @@
-runtime: python37
-service: back-api
+runtime: python312
+service: default
 handlers:
 - url: /static
   static_dir: static/
