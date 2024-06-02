@@ -14,7 +14,7 @@ def buscador(request):
 
 #   ----------------USO WEBSCRAPPING----------------
 def blog(request):
-    url = 'https://marvelblog.com/'  # Reemplaza con la URL de la página a la que se desea hacer webscrapping
+    url = 'https://marvelblog.com/'  # Página a la que se desea hacer webscrapping
     response = requests.get(url)
     html = response.content
 
@@ -24,8 +24,19 @@ def blog(request):
     # Encuentra todas las etiquetas <article>
     articles = soup.find_all('article')
 
-    # Construye una lista con los artículos convertidos a cadenas de texto
-    article_strings = [str(article) for article in articles]
+   # Lista para almacenar los datos de los artículos
+    article_strings = []
+
+    for article in articles:
+        # Encuentra todas las imágenes dentro del artículo
+        img_tags = article.find_all('img')
+        for img in img_tags:
+            # Reemplaza el 'src' con 'data-src' si 'data-src' existe
+            if 'data-src' in img.attrs:
+                img['src'] = img['data-src']
+        
+        # Convierte el artículo modificado en una cadena de texto y lo añade a la lista
+        article_strings.append(str(article))
 
     # Renderiza el template con el contenido HTML de los artículos
     return TemplateResponse(request, 'blog.html', {'articles': article_strings})
